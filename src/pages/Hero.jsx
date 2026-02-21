@@ -6,10 +6,12 @@ export default function Hero() {
           Maneesha Gunarathna
         </p>
 
-        <h1 className="mt-2 uppercase leading-[0.9] font-black tracking-[-0.03em] text-[clamp(2.5rem,6.5vw,9rem)]">
-          <span className="block text-black md:whitespace-nowrap">SCALABLE CLOUD SYSTEMS.</span>
+        <h1 className="mt-2 uppercase leading-[0.9] font-black tracking-[-0.02em] text-[clamp(2.5rem,7vw,7rem)] font-['Krona_One']">
+          <span className="block">SCALABLE CLOUD</span>
+          <span className="block">SYSTEMS.</span>
+
           <span
-            className="block text-transparent md:whitespace-nowrap"
+            className="block mt-6 text-transparent"
             style={{ WebkitTextStroke: "2px #f97316" }}
           >
             FULL-STACK EXECUTION.
@@ -17,7 +19,7 @@ export default function Hero() {
         </h1>
 
         <div className="mt-12 flex flex-col md:flex-row items-start gap-8 md:gap-10">
-          <p className="text-black max-w-[32ch] text-[clamp(1.5rem,1vw,2.8rem)] leading-[1.2] text-start">
+          <p className="text-black max-w-[32ch] text-[clamp(1.5rem,1vw,2.8rem)] leading-[1.2] text-start font-[Pixelify_Sans]">
             I architect resilient cloud infrastructures and high-performance
             digital experiences. Crafting the backbone of the modern web.
           </p>
