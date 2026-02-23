@@ -2,6 +2,8 @@ import './App.css'
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './pages/Hero'
+import Work from './pages/Work'
+import Contact from './pages/Contact'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -25,6 +27,8 @@ function App() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       <Hero isDarkMode={isDarkMode} />
+      <Work isDarkMode={isDarkMode} />
+      <Contact isDarkMode={isDarkMode} />
     </>
   )
 }
