@@ -1,12 +1,20 @@
-export default function Hero() {
+export default function Hero({ isDarkMode }) {
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center overflow-x-hidden pt-16 md:pt-32">
+    <section
+      className={`min-h-screen flex items-center justify-center overflow-x-hidden pt-16 md:pt-32 transition-colors duration-500 ${
+        isDarkMode ? 'bg-zinc-950' : 'bg-white'
+      }`}
+    >
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-4 py-10 text-start relative">
         <p className="text-orange-600 tracking-[0.25em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm font-bold pb-1 mb-1">
           Maneesha Gunarathna
         </p>
 
-        <h1 className="mt-2 uppercase leading-[0.9] sm:leading-[0.85] font-black tracking-[0.12rem] sm:tracking-[0.3rem] text-[clamp(2rem,9vw,8rem)] font-['Krona_One']">
+        <h1
+          className={`mt-2 uppercase leading-[0.9] sm:leading-[0.85] font-black tracking-[0.12rem] sm:tracking-[0.3rem] text-[clamp(2rem,9vw,8rem)] font-['Krona_One'] ${
+            isDarkMode ? 'text-white' : 'text-black'
+          }`}
+        >
           <span className="block sm:whitespace-nowrap">
             SCALABLE
           </span>
@@ -22,7 +30,11 @@ export default function Hero() {
         </h1>
 
         <div className="mt-12 flex flex-col md:flex-row items-start gap-8 md:gap-10">
-          <p className="text-black max-w-[32ch] text-[clamp(1rem,2.8vw,1.5rem)] leading-[1.25] text-start font-[Pixelify_Sans]">
+          <p
+            className={`max-w-[32ch] text-[clamp(1rem,2.8vw,1.5rem)] leading-tight text-start font-[Pixelify_Sans] ${
+              isDarkMode ? 'text-zinc-200' : 'text-black'
+            }`}
+          >
             I architect resilient cloud infrastructures and high-performance
             digital experiences. Crafting the backbone of the modern web.
           </p>
