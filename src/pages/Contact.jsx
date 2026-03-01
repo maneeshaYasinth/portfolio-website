@@ -81,7 +81,7 @@ export default function Contact({ isDarkMode }) {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/maneesha-yasinth-gunarathna-700284253"
+                href="https://www.linkedin.com/in/maneeshayasinth/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`text-xs font-bold uppercase tracking-[0.3em] transition-colors ${
@@ -93,7 +93,7 @@ export default function Contact({ isDarkMode }) {
                 LinkedIn
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/Maneeshagunra23"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`text-xs font-bold uppercase tracking-[0.3em] transition-colors ${
