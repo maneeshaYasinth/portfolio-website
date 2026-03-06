@@ -8,7 +8,7 @@ export default function Contact({ isDarkMode }) {
     >
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         <div className="text-center space-y-16">
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="slide-up" data-aos-duration="800">
             <h2
               className={`text-sm uppercase tracking-[0.5em] ${
                 isDarkMode ? 'text-zinc-400' : 'text-zinc-600'
@@ -27,6 +27,9 @@ export default function Contact({ isDarkMode }) {
           </div>
 
           <p
+            data-aos="slide-up"
+            data-aos-delay="120"
+            data-aos-duration="850"
             className={`text-2xl md:text-3xl max-w-2xl mx-auto font-medium leading-tight ${
               isDarkMode ? 'text-zinc-300' : 'text-zinc-600'
             }`}
@@ -34,7 +37,7 @@ export default function Contact({ isDarkMode }) {
             Currently accepting mission-critical cloud engineering opportunities.
           </p>
 
-          <div className="pt-8 px-2">
+          <div className="pt-8 px-2" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="900">
             <a
               href="mailto:maneeshayasinthgunarathna@gmail.com"
               className={`group relative flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-6 text-base sm:text-xl md:text-3xl lg:text-5xl font-extrabold uppercase italic border-b-4 border-orange-500 pb-3 md:pb-4 hover:text-orange-500 transition-all ${
@@ -63,6 +66,9 @@ export default function Contact({ isDarkMode }) {
           </div>
 
           <div
+            data-aos="slide-up"
+            data-aos-delay="260"
+            data-aos-duration="850"
             className={`mt-32 pt-16 border-t flex flex-col md:flex-row justify-between items-center gap-10 ${
               isDarkMode ? 'border-white/10' : 'border-black/5'
             }`}

@@ -6,11 +6,18 @@ export default function Hero({ isDarkMode }) {
       }`}
     >
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-4 py-10 text-start relative">
-        <p className="text-orange-600 tracking-[0.25em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm font-bold pb-1 mb-1">
+        <p
+          data-aos="fade-down"
+          data-aos-delay="60"
+          className="text-orange-600 tracking-[0.25em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm font-bold pb-1 mb-1"
+        >
           Maneesha Gunarathna
         </p>
 
         <h1
+          data-aos="zoom-in"
+          data-aos-delay="140"
+          data-aos-duration="950"
           className={`mt-2 uppercase leading-[0.9] sm:leading-[0.85] font-black tracking-[0.12rem] sm:tracking-[0.3rem] text-[clamp(2rem,9vw,8rem)] font-['Krona_One'] ${
             isDarkMode ? 'text-white' : 'text-black'
           }`}
@@ -29,7 +36,11 @@ export default function Hero({ isDarkMode }) {
           </span>
         </h1>
 
-        <div className="mt-12 flex flex-col md:flex-row items-start gap-8 md:gap-10">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="260"
+          className="mt-12 flex flex-col md:flex-row items-start gap-8 md:gap-10"
+        >
           <p
             className={`max-w-[32ch] text-[clamp(1rem,2.8vw,1.5rem)] leading-tight text-start font-[Pixelify_Sans] ${
               isDarkMode ? 'text-zinc-200' : 'text-black'
@@ -52,7 +63,11 @@ export default function Hero({ isDarkMode }) {
             
         </div>
 
-        <span className="hidden lg:block absolute right-2 bottom-16 text-orange-500 uppercase tracking-[0.45em] text-xs [writing-mode:vertical-rl]">
+        <span
+          data-aos="slide-left"
+          data-aos-delay="380"
+          className="hidden lg:block absolute right-2 bottom-16 text-orange-500 uppercase tracking-[0.45em] text-xs [writing-mode:vertical-rl]"
+        >
           SCROLL DOWN
         </span>
       </div>

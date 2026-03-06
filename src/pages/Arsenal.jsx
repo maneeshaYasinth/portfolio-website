@@ -8,14 +8,14 @@ export default function Arsenal({ isDarkMode }) {
 		>
 			<div className="max-w-7xl mx-auto px-6 md:px-12">
 				<div id="skills" className="pt-24 border-t border-black/5">
-					<div className="mb-16" style={{ opacity: 1, transform: 'none' }}>
+					<div className="mb-16" data-aos="zoom-in-up" data-aos-duration="850">
 						<h3 className="text-4xl md:text-6xl font-display font-extrabold uppercase italic tracking-tighter">
 							Technical <span className="not-italic">Arsenal.</span>
 						</h3>
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-						<div className="space-y-6" style={{ opacity: 1, transform: 'none' }}>
+						<div className="space-y-6" data-aos="flip-left" data-aos-delay="80" data-aos-duration="850">
 							<h4 className="text-xs font-mono uppercase tracking-[0.3em] text-accent font-bold pb-2 border-b border-accent/20">
 								Cloud
 							</h4>
@@ -38,7 +38,7 @@ export default function Arsenal({ isDarkMode }) {
 							</div>
 						</div>
 
-						<div className="space-y-6" style={{ opacity: 1, transform: 'none' }}>
+						<div className="space-y-6" data-aos="zoom-in-up" data-aos-delay="140" data-aos-duration="850">
 							<h4 className="text-xs font-mono uppercase tracking-[0.3em] text-accent font-bold pb-2 border-b border-accent/20">
 								Backend
 							</h4>
@@ -64,7 +64,7 @@ export default function Arsenal({ isDarkMode }) {
 							</div>
 						</div>
 
-						<div className="space-y-6" style={{ opacity: 1, transform: 'none' }}>
+						<div className="space-y-6" data-aos="flip-right" data-aos-delay="200" data-aos-duration="850">
 							<h4 className="text-xs font-mono uppercase tracking-[0.3em] text-accent font-bold pb-2 border-b border-accent/20">
 								Frontend
 							</h4>
@@ -87,7 +87,7 @@ export default function Arsenal({ isDarkMode }) {
 							</div>
 						</div>
 
-						<div className="space-y-6" style={{ opacity: 1, transform: 'none' }}>
+						<div className="space-y-6" data-aos="zoom-in-up" data-aos-delay="260" data-aos-duration="850">
 							<h4 className="text-xs font-mono uppercase tracking-[0.3em] text-accent font-bold pb-2 border-b border-accent/20">
 								DevOps
 							</h4>

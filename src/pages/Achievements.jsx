@@ -10,9 +10,12 @@ export default function Achievements({ isDarkMode }) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="space-y-24 md:space-y-32">
-          {achievements.map((item) => (
+          {achievements.map((item, index) => (
             <div
               key={item.id}
+              data-aos="flip-up"
+              data-aos-delay={Math.min(index * 90, 260)}
+              data-aos-duration="950"
               className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start"
             >
               <div

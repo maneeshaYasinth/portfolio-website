@@ -10,7 +10,7 @@ export default function Work({ isDarkMode }) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-        <div className="mb-24">
+        <div className="mb-24" data-aos="fade-right" data-aos-duration="800">
           <h2
             className={`text-sm uppercase tracking-[0.4em] mb-6 ${
               isDarkMode ? 'text-zinc-400' : 'text-black'
@@ -35,6 +35,9 @@ export default function Work({ isDarkMode }) {
             return (
               <div
                 key={project.id}
+                data-aos={reverse ? 'fade-up-left' : 'fade-up-right'}
+                data-aos-delay={Math.min(index * 80, 240)}
+                data-aos-duration="900"
                 className={`flex flex-col ${
                   reverse ? "md:flex-row-reverse" : "md:flex-row"
                 } gap-12 items-center`}
