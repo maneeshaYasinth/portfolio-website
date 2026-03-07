@@ -1,6 +1,6 @@
 import rextro1st from "../assets/rextro1st.webp";
 import hackx from "../assets/hackx.webp";
-import pitch60 from "../assets/pitch60.jpeg";
+import pitch60 from "../assets/newPitch60.webp";
 
 
 
