@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 
 export default function Navbar({ isDarkMode, onToggleDarkMode }) {
-  const navItems = ['Work', 'About', 'Contact'];
+  const navItems = [
+    { label: 'Experience', href: '#experience' },
+    { label: 'Achievements', href: '#achievements' },
+    { label: 'Arsenal', href: '#arsenal' },
+    { label: 'Contact', href: '#contact' },
+  ];
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -52,13 +57,13 @@ export default function Navbar({ isDarkMode, onToggleDarkMode }) {
           <div className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className={`text-xs uppercase tracking-[0.3em] font-bold relative group transition-colors ${
                   isDarkMode ? 'text-zinc-300 hover:text-white' : 'text-zinc-600 hover:text-black'
                 }`}
               >
-                {item}
+                {item.label}
                 <span
                   className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
                     isDarkMode ? 'bg-white' : 'bg-black'
@@ -131,14 +136,14 @@ export default function Navbar({ isDarkMode, onToggleDarkMode }) {
         >
           {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               onClick={closeMobileMenu}
               className={`text-3xl sm:text-4xl font-display font-extrabold uppercase italic tracking-tighter transition-colors cursor-pointer ${
                 isDarkMode ? 'text-white hover:text-zinc-400' : 'text-black hover:text-gray-400'
               }`}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>

@@ -4,6 +4,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Navbar from './components/Navbar'
 import Hero from './pages/Hero'
+import Experience from './pages/Experience'
 import Work from './pages/Work'
 import Arsenal from './pages/Arsenal'
 import Contact from './pages/Contact'
@@ -41,6 +42,7 @@ function App() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       <Hero isDarkMode={isDarkMode} />
+      <Experience isDarkMode={isDarkMode} />
       <Work isDarkMode={isDarkMode} />
       <Achievements isDarkMode={isDarkMode} />
       <Arsenal isDarkMode={isDarkMode} />
