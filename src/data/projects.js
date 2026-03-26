@@ -1,5 +1,6 @@
 import sector3 from "../assets/sector3.webp";
 import rezpitch from "../assets/rezpitch.webp";
+import snip from "../assets/3tier-prjct.webp";
 
 export const projects = [
   {
@@ -22,15 +23,14 @@ export const projects = [
     // github: "#",
     live: "https://www.rezpitch.com/",
   },
-  {
-    id: 3,
-    title: "SecureVault",
-    description:
-      "Zero-knowledge encryption for mission-critical data. Security-first backend architecture.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef2bb6db8744?q=80&w=1000&auto=format&fit=crop",
-    tech: ["TypeScript", "Redis", "Security"],
-    github: "#",
-    live: "#",
-  },
+{
+  id: 3,
+  title: "snip.",
+  description:
+    "Built a production-style containerized URL shortener on AWS, architected as a 3-tier application with ECS Fargate, ALB, CloudFront, and DynamoDB. Provisioned all infrastructure with Terraform modules and automated deployments via GitHub Actions CI/CD pipeline.",
+  image: snip,
+  tech: ["Node.js", "Docker", "AWS", "Terraform", "GitHub Actions"],
+  github: "https://github.com/maneeshaYasinth/snip-infra",
+  // live: "" — spin up when demoing
+},
 ];

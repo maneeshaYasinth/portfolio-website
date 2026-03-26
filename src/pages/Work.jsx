@@ -51,7 +51,7 @@ export default function Work({ isDarkMode }) {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-110 group-hover:grayscale-0"
+                    className="w-full h-full object-cover grayscale transition-all duration-1000 scale-90 group-hover:scale-105 group-hover:grayscale-0"
                   />
                 </div>
 
