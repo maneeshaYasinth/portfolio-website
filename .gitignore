@@ -35,5 +35,6 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
-
+portfolio-infra/.terraform.lock.hcl
+*.terraform.lock.hcl
 
