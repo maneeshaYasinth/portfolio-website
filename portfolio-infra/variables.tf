@@ -10,3 +10,7 @@ variable "acm_validation_method" {
   type = string
   default = "DNS"
 }
+
+variable "aws_region" {
+  type = string
+}
