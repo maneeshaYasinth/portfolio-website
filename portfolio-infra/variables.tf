@@ -1,31 +1,16 @@
-variable "domain_name" {
-    type = string
+variable "bucket_name" {
+  type = string
 }
 
-variable "maneeshayasinth_portfolio_bucket_name" {
+variable "domain_name" {
   type = string
 }
 
 variable "acm_validation_method" {
   type = string
+  default = "DNS"
 }
 
-variable "oac_name" {
-  type = string
-}
-
-variable "oac_description" {
-  type = string
-}
-
-variable "oac_origin_type" {
-  type = string
-}
-
-variable "oac_signing_behavior" {
-  type = string
-}
-
-variable "oac_signing_protocol" {
+variable "aws_region" {
   type = string
 }
