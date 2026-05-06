@@ -33,7 +33,7 @@ export default function Experience({ isDarkMode }) {
   return (
     <section
       id="experience"
-      className={`py-32 border-t transition-colors duration-500 ${
+      className={`py-32 border-t overflow-x-hidden transition-colors duration-500 ${
         isDarkMode ? 'bg-zinc-950' : 'bg-white'
       } ${
         isDarkMode ? 'border-black' : 'border-white'
@@ -49,13 +49,13 @@ export default function Experience({ isDarkMode }) {
             Career & Leadership
           </h2>
           <h3
-            className={`text-6xl md:text-8xl font-display font-extrabold tracking-tighter uppercase italic text-balance ${
+            className={`text-6xl md:text-8xl font-display font-extrabold tracking-tighter uppercase italic break-words whitespace-normal text-balance ${
               isDarkMode ? 'text-white' : 'text-black'
             }`}
           >
             Professional <br />
             <span
-              className="not-italic text-transparent"
+              className="not-italic text-transparent block max-w-full"
               style={{ WebkitTextStroke: isDarkMode ? '2px #f4f4f5' : '2px #000000' }}
             >
               Experience.
