@@ -125,10 +125,10 @@ export default function Hero({ isDarkMode }) {
 
             {/* BUTTONS */}
             <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <a className="rounded-full bg-black text-white px-6 py-3">
+              <a className="rounded-full bg-black text-white px-6 py-3" href='#work'>
                 Explore Work
               </a>
-              <a className="rounded-full border px-6 py-3">
+              <a className="rounded-full border px-6 py-3" href='#contact'>
                 Contact Me
               </a>
             </div>
