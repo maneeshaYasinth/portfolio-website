@@ -1,15 +1,10 @@
+import SectionShell from '../components/SectionShell'
 import { achievements } from "../data/achievements";
 
 export default function Achievements({ isDarkMode }) {
   return (
-    <section
-      id="achievements"
-      className={`py-32 transition-colors duration-500 ${
-        isDarkMode ? 'bg-zinc-950' : 'bg-white'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="space-y-24 md:space-y-32">
+    <SectionShell id="achievements">
+      <div className="space-y-24 md:space-y-32">
           {achievements.map((item, index) => (
             <div
               key={item.id}
@@ -73,8 +68,7 @@ export default function Achievements({ isDarkMode }) {
               </div>
             </div>
           ))}
-        </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

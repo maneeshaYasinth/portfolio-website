@@ -1,12 +1,8 @@
+import SectionShell from '../components/SectionShell'
+
 export default function Arsenal({ isDarkMode }) {
 	return (
-		<section
-			id="arsenal"
-			className={`py-32 transition-colors duration-500 ${
-				isDarkMode ? 'bg-zinc-950' : 'bg-white'
-			}`}
-		>
-			<div className="max-w-7xl mx-auto px-6 md:px-12">
+			<SectionShell id="arsenal">
 				<div id="skills" className="pt-24 border-t border-black/5">
 					<div className="mb-16" data-aos="zoom-in-up" data-aos-duration="850">
 						<h3 className="text-4xl md:text-6xl font-display font-extrabold uppercase italic tracking-tighter">
@@ -111,7 +107,6 @@ export default function Arsenal({ isDarkMode }) {
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</SectionShell>
 	)
 }

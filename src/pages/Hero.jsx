@@ -89,7 +89,13 @@ export default function Hero({ isDarkMode }) {
   const [offset, setOffset]   = useState({ x: 0, y: 0 });
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    const rafId = window.requestAnimationFrame(() => {
+      setMounted(true);
+    });
+
+    return () => window.cancelAnimationFrame(rafId);
+  }, []);
 
   const handleMouseMove = (e) => {
     const x = (e.clientX / window.innerWidth  - 0.5) * 14;
@@ -107,45 +113,15 @@ export default function Hero({ isDarkMode }) {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className={`relative overflow-hidden min-h-screen pt-20 flex items-center transition-colors duration-500
-        ${isDarkMode
-          ? 'bg-[#0e0e0e]'
-          : 'bg-[#f8f4f0]'}`}
+      // className={`relative overflow-hidden min-h-screen pt-20 flex items-center transition-colors duration-500
+      //   ${isDarkMode
+      //     ? 'bg-[#0e0e0e]'
+      //     : 'bg-[#f8f4f0]'}`}
     >
       <style>{KEYFRAMES}</style>
 
       {/* ── BACKGROUND: soft radial glows ────────────────── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* main portrait glow */}
-        <div
-          className="absolute right-0 top-0 w-[55%] h-full"
-          style={{
-            background: isDarkMode
-              ? 'radial-gradient(ellipse 60% 70% at 70% 45%, rgba(194,97,35,0.18) 0%, transparent 70%)'
-              : 'radial-gradient(ellipse 60% 70% at 70% 45%, rgba(194,97,35,0.12) 0%, transparent 70%)',
-            animation: 'glow-pulse 5s ease-in-out infinite',
-          }}
-        />
-        {/* left ambient */}
-        <div
-          className="absolute -left-20 top-1/4 w-72 h-72 rounded-full"
-          style={{
-            background: isDarkMode
-              ? 'radial-gradient(circle, rgba(194,97,35,0.08) 0%, transparent 70%)'
-              : 'radial-gradient(circle, rgba(194,97,35,0.06) 0%, transparent 70%)',
-            transform: `translate(${offset.x * 0.5}px, ${offset.y * 0.5}px)`,
-          }}
-        />
-        {/* subtle grid */}
-        <div
-          className="absolute inset-0 opacity-[0.025]"
-          style={{
-            backgroundImage: `linear-gradient(${isDarkMode ? '#fff' : '#000'} 1px, transparent 1px),
-                              linear-gradient(90deg, ${isDarkMode ? '#fff' : '#000'} 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
-          }}
-        />
-      </div>
+      
 
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 pt-4 pb-16">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">

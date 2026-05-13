@@ -9,6 +9,7 @@ import Work from './pages/Work'
 import Arsenal from './pages/Arsenal'
 import Contact from './pages/Contact'
 import Achievements from './pages/Achievements'
+import Layout from './components/Layout'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -39,7 +40,7 @@ function App() {
   const toggleDarkMode = () => setIsDarkMode((previous) => !previous)
 
   return (
-    <>
+    <Layout isDarkMode={isDarkMode}>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       <Hero isDarkMode={isDarkMode} />
       <Experience isDarkMode={isDarkMode} />
@@ -47,7 +48,7 @@ function App() {
       <Achievements isDarkMode={isDarkMode} />
       <Arsenal isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
-    </>
+    </Layout>
   )
 }
 
