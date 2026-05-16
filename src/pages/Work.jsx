@@ -1,16 +1,10 @@
+import SectionShell from '../components/SectionShell'
 import { projects } from "../data/projects";
 
 export default function Work({ isDarkMode }) {
   return (
-    <section
-      id="work"
-      className={`py-32 transition-colors duration-500 ${
-        isDarkMode ? 'bg-zinc-950' : 'bg-white'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-
-        <div className="mb-24" data-aos="fade-right" data-aos-duration="800">
+    <SectionShell id="work">
+      <div className="mb-24" data-aos="fade-right" data-aos-duration="800">
           <h2
             className={`text-sm uppercase tracking-[0.4em] mb-6 ${
               isDarkMode ? 'text-zinc-400' : 'text-black'
@@ -124,8 +118,7 @@ export default function Work({ isDarkMode }) {
               </div>
             );
           })}
-        </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

@@ -1,13 +1,12 @@
+import SectionShell from '../components/SectionShell'
+
 export default function Contact({ isDarkMode }) {
   return (
-    <section
+    <SectionShell
       id="contact"
-      className={`py-48 relative overflow-hidden transition-colors duration-500 ${
-        isDarkMode ? 'bg-zinc-950' : 'bg-white'
-      }`}
+      className="py-48 relative overflow-hidden"
     >
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl">
-        <div className="text-center space-y-16">
+      <div className="text-center space-y-16">
           <div className="space-y-6" data-aos="slide-up" data-aos-duration="800">
             <h2
               className={`text-sm uppercase tracking-[0.5em] ${
@@ -119,8 +118,7 @@ export default function Contact({ isDarkMode }) {
               © 2026 — Crafted with Intent
             </span>
           </div>
-        </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

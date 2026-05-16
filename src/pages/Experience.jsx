@@ -1,3 +1,5 @@
+import SectionShell from '../components/SectionShell'
+
 export default function Experience({ isDarkMode }) {
   const experienceItems = [
     {
@@ -31,16 +33,11 @@ export default function Experience({ isDarkMode }) {
   ];
 
   return (
-    <section
+    <SectionShell
       id="experience"
-      className={`py-32 border-t transition-colors duration-500 ${
-        isDarkMode ? 'bg-zinc-950' : 'bg-white'
-      } ${
-        isDarkMode ? 'border-black' : 'border-white'
-      }`}
+      className={`border-t overflow-x-hidden ${isDarkMode ? 'border-black' : 'border-white'}`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="mb-24" data-aos="fade-right" data-aos-duration="800">
+      <div className="mb-24" data-aos="fade-right" data-aos-duration="800">
           <h2
             className={`text-sm font-mono uppercase tracking-[0.4em] font-bold mb-6 ${
               isDarkMode ? 'text-orange-400' : 'text-orange-500'
@@ -49,13 +46,13 @@ export default function Experience({ isDarkMode }) {
             Career & Leadership
           </h2>
           <h3
-            className={`text-6xl md:text-8xl font-display font-extrabold tracking-tighter uppercase italic text-balance ${
+            className={`text-6xl md:text-8xl font-display font-extrabold tracking-tighter uppercase italic break-words whitespace-normal text-balance ${
               isDarkMode ? 'text-white' : 'text-black'
             }`}
           >
             Professional <br />
             <span
-              className="not-italic text-transparent"
+              className="not-italic text-transparent block max-w-full"
               style={{ WebkitTextStroke: isDarkMode ? '2px #f4f4f5' : '2px #000000' }}
             >
               Experience.
@@ -126,8 +123,7 @@ export default function Experience({ isDarkMode }) {
               </div>
             </div>
           ))}
-        </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }
