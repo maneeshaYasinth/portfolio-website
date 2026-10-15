@@ -3,32 +3,14 @@ import SectionShell from '../components/SectionShell'
 export default function Experience({ isDarkMode }) {
   const experienceItems = [
     {
-      period: '2024 - Present',
-      role: 'Junior Treasurer',
-      organization: 'AWS Cloud Club',
-      description:
-        'Managing financial operations and strategic funding to enable large-scale cloud computing events and community-driven tech initiatives across the university.',
-    },
-    {
-      period: '2025 Aug - 2024 Sep',
-      role: 'Project Manager',
-      organization: 'Electronics and Computer Science Club (ECSC)',
-      description:
-        'Spearheaded the planning and execution of a massive, university-wide robotics competition, overseeing cross-functional teams from conceptualization to final deployment.',
-    },
-    {
-      period: '2024 Sep - 2024 Dec',
-      role: 'Public Relations Coordinator',
-      organization: 'Electronics and Computer Science Club (ECSC)',
-      description:
-        'Led branding, communication strategies, and outreach campaigns, significantly increasing club engagement and event participation metrics.',
-    },
-    {
-      period: '2023 - Present',
-      role: 'Member',
-      organization: 'Electronics and Computer Science Club (ECSC)',
-      description:
-        'Actively contributed to tech workshops, foundational club operations, and collaborative engineering projects.',
+      period: 'Jul 2026 - Present',
+      role: 'DevOps Engineer Intern',
+      organization: 'Arimac Lanka',
+      description: [
+        'Working as a DevOps Intern on the Peoples Pay eKYC platform.',
+        'Implemented secret rotation to strengthen credential security, and carried out Java version upgrades across project services.',
+        'Built and configured GitLab CI pipelines to support reliable, repeatable deployments.',
+      ],
     },
   ];
 
@@ -112,13 +94,18 @@ export default function Experience({ isDarkMode }) {
                     {item.organization}
                   </h5>
 
-                  <p
-                    className={`text-lg font-light leading-relaxed max-w-2xl ${
+                  <ul
+                    className={`text-lg font-light leading-relaxed max-w-2xl space-y-3 ${
                       isDarkMode ? 'text-zinc-300' : 'text-zinc-600'
                     }`}
                   >
-                    {item.description}
-                  </p>
+                    {item.description.map((point) => (
+                      <li key={point} className="flex gap-3">
+                        <span className={isDarkMode ? 'text-orange-400' : 'text-orange-500'}>—</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

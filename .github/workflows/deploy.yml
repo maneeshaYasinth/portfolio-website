@@ -1,10 +1,13 @@
 name: Deploy Portfolio
 
+# Manual trigger only while the site isn't hosted on AWS.
+# To re-enable auto-deploy, add back:
+#   push:
+#     branches:
+#       - main
 on:
-  push:
-    branches:
-      - main
-      
+  workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

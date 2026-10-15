@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="#18181b"/>
+
+  <!-- AWS boundary (Terraform-managed) -->
+  <rect x="220" y="55" width="550" height="250" rx="10" fill="none" stroke="#52525b" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="240" y="290" fill="#a1a1aa" font-size="13" letter-spacing="2">AWS · PROVISIONED WITH TERRAFORM MODULES</text>
+
+  <g fill="#27272a" stroke="#f4f4f5" stroke-width="1.5">
+    <rect x="30" y="150" width="140" height="70" rx="8"/>
+    <rect x="260" y="150" width="180" height="70" rx="8"/>
+    <rect x="275" y="72" width="150" height="46" rx="8"/>
+    <rect x="550" y="150" width="200" height="70" rx="8"/>
+    <rect x="30" y="380" width="160" height="70" rx="8"/>
+    <rect x="280" y="380" width="200" height="70" rx="8"/>
+  </g>
+
+  <g fill="#f4f4f5" font-size="16" font-weight="700" text-anchor="middle">
+    <text x="100" y="182">Visitor</text>
+    <text x="350" y="182">CloudFront</text>
+    <text x="350" y="101">ACM · TLS</text>
+    <text x="650" y="182">S3 (private)</text>
+    <text x="110" y="412">GitHub</text>
+    <text x="380" y="412">GitHub Actions</text>
+  </g>
+  <g fill="#a1a1aa" font-size="12" text-anchor="middle">
+    <text x="100" y="204">browser</text>
+    <text x="350" y="204">HTTPS only · cache</text>
+    <text x="650" y="204">public access blocked</text>
+    <text x="110" y="434">source repo</text>
+    <text x="380" y="434">npm run build</text>
+  </g>
+
+  <g stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M170,185 H256"/>
+    <path d="M440,185 H546"/>
+    <path d="M350,118 V146"/>
+    <path d="M190,415 H276"/>
+    <path d="M480,415 H650 V224"/>
+    <path d="M380,380 V224"/>
+  </g>
+
+  <g fill="#fdba74" font-size="12">
+    <text x="452" y="175">OAC · SigV4</text>
+    <text x="500" y="405">s3 sync --delete</text>
+    <text x="390" y="345">invalidate /*</text>
+  </g>
+</svg>
