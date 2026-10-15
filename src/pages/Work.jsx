@@ -77,6 +77,25 @@ export default function Work({ isDarkMode }) {
                     </p>
                   </div>
 
+                  {project.infra && (
+                    <dl
+                      className={`grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 border-l-2 pl-4 text-xs font-mono ${
+                        isDarkMode ? 'border-orange-400' : 'border-orange-500'
+                      }`}
+                    >
+                      {project.infra.map(([label, value]) => (
+                        <div key={label} className="contents">
+                          <dt
+                            className="uppercase tracking-widest text-zinc-500"
+                          >
+                            {label}
+                          </dt>
+                          <dd className={isDarkMode ? 'text-zinc-200' : 'text-black'}>{value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+
                   <div className="flex flex-wrap gap-4">
                     {project.tech.map((t, i) => (
                       <span
@@ -93,26 +112,26 @@ export default function Work({ isDarkMode }) {
                   </div>
 
                   <div className="flex gap-8 pt-4">
-                    <a
-                      href={project.github}
-                      className={`text-xs font-bold uppercase tracking-widest border-b pb-1 ${
-                        isDarkMode
-                          ? 'border-white text-white hover:text-zinc-400'
-                          : 'border-black text-black hover:text-gray-600'
-                      }`}
-                    >
-                      GitHub
-                    </a>
-                    <a
-                      href={project.live}
-                      className={`text-xs font-bold uppercase tracking-widest border-b pb-1 ${
-                        isDarkMode
-                          ? 'border-white text-white hover:text-zinc-400'
-                          : 'border-black text-black hover:text-gray-600'
-                      }`}
-                    >
-                      Live
-                    </a>
+                    {[
+                      ['GitHub', project.github],
+                      ['Live', project.live],
+                    ]
+                      .filter(([, href]) => href)
+                      .map(([label, href]) => (
+                        <a
+                          key={label}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`text-xs font-bold uppercase tracking-widest border-b pb-1 ${
+                            isDarkMode
+                              ? 'border-white text-white hover:text-zinc-400'
+                              : 'border-black text-black hover:text-gray-600'
+                          }`}
+                        >
+                          {label}
+                        </a>
+                      ))}
                   </div>
                 </div>
               </div>
